@@ -3,20 +3,18 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ClarityModule } from '@clr/angular';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NavBarModule } from './shared/nav-bar/nav-bar.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ClarityModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NavBarModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

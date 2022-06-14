@@ -5,14 +5,27 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/in-progress',
-    pathMatch: 'full'
+    redirectTo: '/landing-page',
+    pathMatch: 'full',
   },
-  {path: 'in-progress', loadChildren: () => import('./features/in-progress/in-progress.module').then(m => m.InProgressModule)}
+  {
+    path: 'in-progress',
+    loadChildren: () =>
+      import('./features/in-progress/in-progress.module').then(
+        (m) => m.InProgressModule
+      ),
+  },
+  {
+    path: 'landing-page',
+    loadChildren: () =>
+      import('./features/landing-page/landing-page.module').then(
+        (m) => m.LandingPageModule
+      ),
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

@@ -29,7 +29,7 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/assets/img/alpakana.jpg",
+              "src/assets/img/alpakana.jpg"
             ],
             "styles": [
               "node_modules/@clr/ui/clr-ui.min.css",
